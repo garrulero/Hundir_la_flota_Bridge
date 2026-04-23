@@ -1,20 +1,15 @@
 import numpy as np
-import utils as ut
 
-def crear_tablero():
-    tablero = np.full((10, 10), "_")
+#no tengo crear tablero porque se crea al hacer un objeto desde la clase
+#colocar_barco esta dentro de la clase
+class Tablero:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        # Creamos el tablero de 10x10 para el objeto
+        self.matriz = np.full((10, 10), "_")
 
-    return (tablero)
+    def colocar_barco(self, lista_casillas):
+        for f, c in lista_casillas:
+            self.matriz[f, c] = "O"
 
 
-
-
-def colocar_barco(lista_casillas, tablero):
-    for casilla in lista_casillas:
-        # 'casilla' es una tupla, por ejemplo (8, 5)
-        # Extraemos los números:
-        f = casilla[0]
-        c = casilla[1]
-        
-        # AQUÍ VA TU IDEA:
-        tablero[f, c] = 'O'
