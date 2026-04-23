@@ -5,8 +5,8 @@ import numpy as np
 class Tablero:
     def __init__(self, nombre):
         self.nombre = nombre
-        # Creamos el tablero de 10x10 para el objeto
-        self.matriz = np.full((10, 10), "_")
+        # aqui se puede cambiar el tamaño del tablero
+        self.matriz = np.full((3, 3), "_")
 
     def colocar_barco(self, lista_casillas):
         for f, c in lista_casillas:
